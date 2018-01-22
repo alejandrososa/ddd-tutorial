@@ -20,4 +20,3 @@ para llevar a cabo este paradigma de trabajo.
 
 * Patrones de Diseño
 * Principios S.O.L.I.D, ya explicaremos el por qué de los puntos.
-* 
