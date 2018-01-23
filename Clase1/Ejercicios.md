@@ -10,30 +10,30 @@ Robert C. Martin, allá por el año 1995.
 
 ## Single Responsibility Principle (SRP)
 
-El principio que da origen a la S de S.O.L.I.D es el de una *única responsabilidad* y dice que cada clase debe ocuparse de 
-un solo menester. Visto de otro modo, R. Martin dice que cada clase debería tener un único motivo para ser modificada.
+La clase FutballPlayerAndReferee es un monstrito que esta en su etapa de crecimiento, para evitar que siga crececiendo y 
+volvernos locos, se pide implementar el principio de *única responsabilidad*. Pista: dividir estas clases.
 
 ## Open-Closed Principle (OCP)
 
-Una entidad software (una clase, módulo o función) debe estar abierta a extensiones pero cerrada a modificaciones. 
-Puesto que el software requiere cambios y que unas entidades dependen de otras, las modificaciones en el código de una 
-de ellas puede generar indeseables efectos colaterales en cascada.
+Para evitar que el metodo `modify` crezca en la clase StringReplacement cada vez que necesiten reemplazar un texto en una
+cadena, se pide implementar el principio de abierto-cerrado y que dicho metodo sea agnostico de lo que tiene que reemplazar 
+y devolver. Pista: este metodo debe ser capaz de recibir una collección de filtros (array) e iterar sobre cada filtro y
+retornar un string.
 
 
 ## Liskov Substitution Principle (LSP)
 
-Introducido por Barbara Liskov en 1987, lo que viene diciendo es que si una función recibe un objeto como parámetro, de 
-tipo X y en su lugar le pasamos otro de tipo Y, que hereda de X, dicha función debe proceder correctamente.
+Tenemos una clase para filtrar códigos, y de momento se esta ocupando de poner lógica y comprobaciones que quizas otras
+clases que hereden de esta no tendrán. Se pide implementar el principio Liskov, una pista: array_map 
 
 ## Interface Segregation Principle (ISP)
 
-Cuando empleamos el SRP también empleamos el ISP como efecto colateral. El ISP defiende que no obliguemos a los clientes 
-a depender de clases o interfaces que no necesitan usar. Tal imposición ocurre cuando una clase o interfaz tiene más 
-métodos de los que un cliente (otra clase o entidad) necesita para sí mismo. Seguramente sirve a varios objetos cliente 
-con responsabilidades diferentes, con lo que debería estar dividida en varias entidades.
+La clase BasketballPlayer hereda de una interface que le obliga a realizar acciones de defensa, ofensa y dar instrucciones a 
+los jugadores. Se pide implementar el principio de segregación de interfaces para que la clase BasketballPlayer no sea
+forzada a utilizar metodos que no necesita.
 
 ## Dependency Inversión Principle (DIP)
 
-La inversión de dependencias da origen a la conocida inyección de dependencias, una de las mejores técnicas para lidiar 
-con las colaboraciones entre clases, produciendo un código reutilizable, sobrio y preparado para cambiar sin producir 
-efectos bola de nieve.
+En este ejercicio tenemos un nuevo requisito en la empresa, debemos conectarnos tanto a una base de datos MySql como a 
+Postgres, el código existente sólo fue desarrollado para conectarse a MySql. Se necesita utilizar el principio de Inversión 
+de dependencias para lograr que la clase PasswordReminder se pueda conectar a una base de datos sin conocer su tipo.

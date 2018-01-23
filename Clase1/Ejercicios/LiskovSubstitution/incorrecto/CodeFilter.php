@@ -21,9 +21,11 @@ class CodeFilter implements Filter
     public function run(array $array)
     {
         if (empty($array)) throw new \Exception('empty array');
+
         foreach ($array as $value) {
             if ($value == 'bar') return 'yikes';
         }
+
         return $array;
     }
 }
