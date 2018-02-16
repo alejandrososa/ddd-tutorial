@@ -9,7 +9,7 @@
 namespace DependencyInversion;
 
 
-class MySqlConnection
+class MySqlConnection implements ConnectionInterface
 {
     public function connect()
     {

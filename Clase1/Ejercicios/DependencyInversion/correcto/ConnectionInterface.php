@@ -2,17 +2,14 @@
 /**
  * Created by PhpStorm.
  * User: Alejandro Sosa <alesjohnson@hotmail.com>
- * Date: 22/01/18
- * Time: 18:22
+ * Date: 12/02/18
+ * Time: 12:58
  */
 
 namespace DependencyInversion;
 
 
-class MySqlConnection
+interface ConnectionInterface
 {
-    public function connect()
-    {
-        //
-    }
+    public function connect();
 }

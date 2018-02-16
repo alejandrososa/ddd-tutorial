@@ -9,7 +9,7 @@
 namespace DependencyInversion;
 
 
-class MySqlConnection
+class PostgresConnection implements ConnectionInterface
 {
     public function connect()
     {

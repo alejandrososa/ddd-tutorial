@@ -9,7 +9,7 @@
 namespace InterfaceSegregation;
 
 
-class BasketballPlayer implements Basketball
+class BasketballPlayer implements Offense, Defense
 {
     /**
      * Block a shot by the offense
@@ -34,16 +34,5 @@ class BasketballPlayer implements Basketball
     protected function randomBool()
     {
         return (bool)rand(0, 1);
-    }
-
-    /**
-     * Echos out some string of profanities
-     *
-     * @return string
-     */
-    public function yellAtPlayersLikeBobbyKnight()
-    {
-        return null;
-
     }
 }

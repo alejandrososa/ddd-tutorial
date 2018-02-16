@@ -1,7 +1,7 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: alejandro
+ * User: Alejandro Sosa <alesjohnson@hotmail.com>
  * Date: 22/01/18
  * Time: 18:10
  */
@@ -12,10 +12,9 @@ namespace OpenClosed;
 class StringReplacement
 {
     /**
-     * Replace strings using Filters
+     * Modifies strings
      *
-     * @param string $string
-     * @param Filter[] $filters
+     * @param $string
      * @return string
      */
     public function modify($string)
